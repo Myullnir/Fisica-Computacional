@@ -1,0 +1,6 @@
+# Computacional-TP3
+
+
+Me parece muy importante el tener esto de acá en adelante, como tener el ldata. La idea es que acá tenes el archivo Makefile, el cual partiendo de una carpeta que tenga todos tus módulos en src (Source), te va a crear tur archivos .o en bin y de ahí te va a crear un ejecutable que va a correr todo tu programa.
+Esto es genial, ni siquiera tenés que usar el gcc y demás cosas. Solo usando "make all" te compila y te reune todo. Estate atento, no sé si el "paciente 0" en la carpeta de bins te jode o no. Yo creo que no, pero cuidado. Con esto estás en camino sólido para cosas de computación. Fue muy provechosa esta materia.
+Este momento va a ser tu: "El hombre de negro huía a través del desierto. Y el pistolero iba en pos de él".
