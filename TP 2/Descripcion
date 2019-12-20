@@ -1,0 +1,6 @@
+# Computacional-TP2
+Trabajo de metropolis Montecarlo
+
+Para compilar programas tenes que escribir lo siguiente: gcc -Wall -O3 -o miprog.e miprog.c -lm
+
+Para correr el prorama tenes que poner ./miprog.e
