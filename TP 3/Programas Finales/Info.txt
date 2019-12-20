@@ -1,0 +1,36 @@
+Temperaturas te arma unos TXT para ver como cae la T a medida que el sistema avanza.
+Al usar esto, dentro de Correccion T había descomentando las partes que arman el archivo.
+
+---------------------------------------------------------------------------------------------------------
+
+EyF es el programa para calcular la energía y las fluctuaciones del sistema. Lo deja termalizar,
+Lo acerca al valor de T deseado y después le va midiendo valores usando un tiempo de descorrelación
+de 30 iteraciones. Porque hablando con Diego, me dijo que tomar 10 estaba bien.
+
+---------------------------------------------------------------------------------------------------------
+
+1cFluc Te arma los archivos de fluctuaciones, para eso termaliza, y después itera una buena cantidad
+de veces, descorrelaciona en cada iteración y luego guarda los datos de energía cinética y potencial y
+también promedia la temperatura.
+
+---------------------------------------------------------------------------------------------------------
+
+1cTerm Hace avanzar al sistema una cantidad suficiente de pasos y registra Energía Cinética y Potencial.
+Te hace eso para muchos valores de T distintos.
+
+---------------------------------------------------------------------------------------------------------
+
+EyP Es el programa que calcula la energía y la presión. Lo que hace es lo siguiente: Construye las LUTS,
+,entra en dos for (uno para la densidad, otro para la temperatura), inicializa los vectores y setea condiciones
+iniciales, Termaliza, Corrige la T para llegar al valor de T que se eligió inicialmente, y luego empieza a 
+realizar iteraciones del sistema, descorrelaciona cada 10 y mide. Lo que mide lo promedia con 500 mediciones.
+Luego, ese dato promediado de la energía, la temperatura y la presión los guarda. De esta manera crea un archivo
+para cada densidad.
+
+---------------------------------------------------------------------------------------------------------
+
+G(r) Es el programa que calcula la distribución g(r) para el sistema. Para esto arma las LUTS,inicializa vectores,
+setea condiciones iniciales, arma los vectores gr, termaliza, corrige la T hasta llagar a la T deseada, 
+itera al sistema y calcula g(r) para cada paso, guardando el promedio temporal de las g(r). También te tira
+un archivo con tres columnas que tienen la posición X,Y,Z de cada partícula
+
