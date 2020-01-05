@@ -4,6 +4,6 @@
 #define Inicializar_H
 #include <math.h>
 
-int RED(int *red, int Q, int F, int N);
+int GenerarR(struct Red Var);
 
 #endif

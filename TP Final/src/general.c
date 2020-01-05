@@ -6,6 +6,7 @@
 #include<math.h>
 #include "general.h"
 
+
 // Esta función me genera un número random
 double Random(){
 	return ((double) rand()/(double) RAND_MAX);

@@ -6,9 +6,10 @@
 #include "general.h"
 #include "inicializar.h"
 
-int RED(int *red, int Q, int F, int N){
+
+// Esta función me genera la red del sistema, asignándole a cada usuario sus F valores para cada tema
+int GenerarR(struct Red Var){
 	int i;
-	for(i=0;i<N*N*F;i++) *(red+i) = round((Q-0.000001)*Random()-0.4999994); // Inicializo mi red
-	// Voy a armar un txt con los datos y los voy a cargar en Python para analizarlos
+	for(i=0;i<Var.N2*Var.N2*Var.F;i++) Var.red[i] = (int) floor(Var.Q*Random()*0.9999); // Inicializo mi red
 	return 0;
 }
