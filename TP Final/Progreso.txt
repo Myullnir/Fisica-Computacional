@@ -12,3 +12,60 @@ que afecte. Digo, tiene una tendencia, pero es tan baja, que puedo considerar qu
 la distribución de números es efectivamente aleatoria.
 
 -------------------------------------------------------------------
+03/01/2019
+
+Logré pasar el archivo a que funcione con structs. Ya puede armar la red y armar
+un txt con los datos.
+
+Por otra parte, armé las funciones PI e Imitar. Todavía no las probé, voy a tener
+que pasarlas a Prosem primero antes de usarlas.
+
+---------------------------------------------------------------------
+04/01/2020
+
+Vamos anotando que son muchas las cosas que estoy haciendo y me puedo llegar a
+confundir u olvidar algún cambio.
+
+Primero, cambié el método de tomar números random. Saqué el round, y opté por un
+floor. La idea es que reduje el tamaño del intervalo al multiplicarlo por 0.9999.
+No usé un número con más decimales para no joder mucho las cuentas. Me parece 
+mejor porque es más fácil de ver lo que está pasando. También constate que entre
+el número más elegido y el menos, hay un 1% de diferencia, con respecto al total de
+números sacados. Es decir que si saco 50000 números y los distribuyo en una serie
+de números, el más elegido tiene 500 más que el menos elegido. Eso es todo.
+
+Segundo, cambié el nombre de la propiedad N en el struct a N2. Esto es para recordar
+que lo que voy a hacer para cumplir Condiciones de Contorno Periódicas (CCP) es
+armar dos filas y dos columnas fantasmas. Esto implica que en inicialización voy a 
+tener que armar dos funciones más que se encarguen en cada paso de reescribir esas
+filas y columnas para que se cumplan las condiciones. Y que el número que le tengo
+que pasar a N2 es N+2.
+
+Tercero, me anoté en el cuaderno una forma de ubicar a cada individuo en la red. Es
+decir, ubicar en qué elemento del puntero comienza su vector con F opiniones. 
+Esto, por más que es algo de dos líneas, lo voy a convertir en una función aparte.
+Un gran motivo para hacerlo es porque sino tendría que armar una variables extra
+innecesaria, que sería Fc, y la verdad así es como después se me llena de variables
+que no quiero ver. Tampoco quiero llenar el struct con pelotudeces. Eso también me
+hace pensar que algo còmodo sería definir las variables iterativas como i o j dentro
+de los for. Fijate si es un problema redefinir una variable muchas veces.
+
+Cuarto, para hacer la toma de decisión de a que vecino elegir, voy a usar la función
+switch. De paso, encontré un coso que explica muy bien como funca. Por otra parte,
+antes de seguir con lo que quiero probar, es primordial armar las funciones que
+establecen las CCP. Trabajemos en eso mañana
+
+----------------------------------------------------------------------------------
+06/01/2020
+
+Ya armé la función CCP, funciona correctamente. Después la tengo que pasar a la 
+lista de funciones en avanzar.c
+
+Ahora logré hacer funcionar la función Ubicar. En realidad, el problema fue de
+interpretación mío, las cuentas estaban bien. El problema estuvo en que yo estaba
+contando a las personas desde 1, pero en realidad se contaban desde la posición 0.
+Por eso daba raro y el Filas Completas no estaba funcionando. Por eso es que te daba
+la sensación de que para corregirlo ibas a tener que hacer p1-1. 
+
+Bueno, ya mañana entonces nos podemos dedicar al interesante. Vamos a armar una 
+función que tenga un switch y cases. De esa manera, vamos a elegir vecinos.
