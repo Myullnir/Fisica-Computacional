@@ -5,5 +5,7 @@
 #include <math.h>
 
 int GenerarR(struct Red Var);
+int CCP(struct Red Var);
+int Visualizar(struct Red Var);
 
 #endif
