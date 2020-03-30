@@ -19,6 +19,7 @@ struct Red{
 	int Q; // Cantidad de opiniones
 	int Tpers; // Cantidad total de personas en la red
 	int *red; // Array unidimensional que simula la red, con F casilleros para cada individuo
+	int L; // Factor que determina el crecimiento de las potencias de 10 en el etiquetado.
 };
 
 

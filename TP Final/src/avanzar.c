@@ -81,3 +81,13 @@ int Vecino(struct Red Var, int p1){
 	}
 	return p2;
 }
+
+// Esta función etiqueta mis vectores. Es decir, a cada uno le asigna un número único.
+double Etiquetar(struct Red Var, int k){
+	double S=0,P;
+	for(int j = 0; j<Var.F; j++){
+		P = pow(10,j+Var.L);
+		S = S + ((float) Var.red[k+j]/ (float) Var.Q)*P;
+	}	
+	return S;
+}
