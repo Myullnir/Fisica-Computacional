@@ -1,0 +1,17 @@
+1) La única carpeta que te interesa es la de TP FINAL. Descargala entera, va a ser
+   más fácil.
+2) Yo cambié el main actual del que te mostré el otro día, así que necesitás tomar
+   todo el código en el archivo "Termalización varios N.c" y reemplazarlo en el main
+   que se encuentra dentro de la carpeta src.
+3) Luego, con el Cygwin, te movés hasta la carpeta TP Final que descargaste. Es decir,
+   abrís Cygwin, desde línea de comando usás cd para ir guiándote hasta la carpeta
+   TP Final. Mi recomendación, poné la carpeta en el disco D, dentro de Documents.
+   Entonces podés acceder a esa carpeta directamente con el comando:
+   cd "D:Documents/TP Final".
+4) Cada vez que hayas hecho un cambio dentro del main que está en la carpeta src y lo
+   quieras mandar a correr, hacés lo siguiente. Primero guardás los cambios. Después,
+   desde Cygwin escribís el comando "make all". Si hay algún error, te lo va a tirar.
+   Superados todos los errores, simplemente escribís "./axelrod.e" y vas a poder
+   correr el programa.
+
+Creo que eso es todo lo básico, cualquier duda decime
